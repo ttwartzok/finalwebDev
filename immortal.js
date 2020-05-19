@@ -75,3 +75,13 @@ function checkSignUpInput(username,password,password2){
   
  }
 window.onload = showDeals;
+
+// code for random links
+var links = [
+"/batmobile.html", "/delorean.html", "/ghostbusters.html", "/greenhornet.html", "/griswalds.html",
+"/jetsons.html", "/kitt.html", "/mario.html", "/mcqueen.html", "/mysterymachine.html",
+"/transam.html", "/warthog.html"]
+
+function randomLink() {
+var i = parseInt(Math.random() * links.length);
+location.href = links[i];
