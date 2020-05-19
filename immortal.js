@@ -74,14 +74,24 @@ function checkSignUpInput(username,password,password2){
   }
   
  }
+
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    cn = ul.getElementsByClassName("carTile");
+    for (i = 0; i < cn.length; i++) {
+        a = cn[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            cn[i].style.display = "";
+        } else {
+            cn[i].style.display = "none";
+        }
+    }
+}
 window.onload = showDeals;
 
-// code for random links
-var links = [
-"/batmobile.html", "/delorean.html", "/ghostbusters.html", "/greenhornet.html", "/griswalds.html",
-"/jetsons.html", "/kitt.html", "/mario.html", "/mcqueen.html", "/mysterymachine.html",
-"/transam.html", "/warthog.html"]
 
-function randomLink() {
-var i = parseInt(Math.random() * links.length);
-location.href = links[i];
+

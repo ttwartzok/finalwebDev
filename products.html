@@ -12,12 +12,12 @@
 	  <script src="/immortal.js"></script>
 	  </header>
 	  <nav>
+		<a href="/hotdeal.html">Hot Deal</a> |
+	  <a href="/about.html">About us</a> |
+	<a href="/contact.html">Contact Us</a> | 
 	<a href="/products.html">Products</a> |
-    <a href="/about.html">About Us</a> |
-    <a href="/contact.html">Contact Us</a> |
-    <a href="#" onclick="randomLink();">Surprise Me</a> |
-    <a href="/signin.html">Sign in</a> |
-    <a href="/register.html">Register</a> |
+	<a href="/signin.html" >Sign in</a> | 
+	<a href="/register.html" >Register</a> |
 	<input type="search" id="myInput" onkeyup="myFunction()" placeholder="Search..">
 		
 		  
@@ -135,21 +135,4 @@
 </html>
 
 
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    cn = ul.getElementsByClassName("carTile");
-    for (i = 0; i < cn.length; i++) {
-        a = cn[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            cn[i].style.display = "";
-        } else {
-            cn[i].style.display = "none";
-        }
-    }
-}
-</script>
+
