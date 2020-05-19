@@ -77,9 +77,9 @@ function checkSignUpInput(username,password,password2){
  }
 
 // search
-function searchBar() {
+function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("find");
+    input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
     cn = ul.getElementsByClassName("carTile");
