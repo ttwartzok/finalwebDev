@@ -1,4 +1,3 @@
-// check for deals
 function showDeals(){  
     var string = document.getElementsByClassName("price");
     var sLength = string.length;
@@ -77,9 +76,9 @@ function checkSignUpInput(username,password,password2){
  }
 
 // search
-function myFunction() {
+function searchBar() {
     var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
+    input = document.getElementById("find");
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
     cn = ul.getElementsByClassName("carTile");
@@ -96,12 +95,11 @@ function myFunction() {
 
 // random links
 var links = [
-"/batmobile.html", "/delorean.html", "/ghostbusters.html", "/greenhornet.html", "/griswalds.html"
-, "/jetsons.html", "/kitt.html", "/mario.html", "/mcqueen.html", "/mysterymachine.html",
-"/transam.html", "/warthog.html"]
+"products/batmobile.php", "products/delorean.php", "products/ghostbusters.php", "products/greenhornet.php", "products/griswalds.php"
+, "products/jetsons.php", "products/kitt.php", "products/mario.php", "products/mcqueen.php", "products/mysterymachine.php",
+"products/transam.php", "products/warthog.php"]
 
 function randomLink() {
 var i = parseInt(Math.random() * links.length);
 location.href = links[i];
 };
-

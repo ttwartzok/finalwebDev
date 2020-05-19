@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -9,22 +10,11 @@
 
 <body>
 <header>
-    <a href="/index.html"><img src="/images/logo.png" class= "headerImage"></a>
+    <a href="/index.php"><img src="/images/logo.png" class= "headerImage"></a>
     <strong class="headerSub">the cars of your dreams</strong>
 </header>
 
-<nav>
-	<a href="/hotdeal.html">Hot Deal</a> |
-	  <a href="/about.html">About us</a> |
-	<a href="/contact.html">Contact Us</a> | 
-	<a href="/products.html">Products</a> |
-	<a href="/signin.html" class="floatRight">Sign in</a> | 
-	<a href="/register.html" class="floatRight">Register</a> |
-
-	
-	
-	  
-</nav>
+<?php @include '../navbar.php' ?>
 
 <div class="productContainer">
 <div class="row">
