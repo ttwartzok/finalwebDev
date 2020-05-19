@@ -1,4 +1,4 @@
-// check for price
+// check for deals
 function showDeals(){  
     var string = document.getElementsByClassName("price");
     var sLength = string.length;
@@ -18,6 +18,8 @@ function showDeals(){
             }
     }
 }
+
+window.onload = showDeals;
 
 // verify login
 function checkLoginInput(password,username){
@@ -91,8 +93,6 @@ function searchBar() {
         }
     }
 }
-
-window.onload = showDeals;
 
 // random links
 var links = [
