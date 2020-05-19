@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" type="text/css" href="/immortal.css">
+		<link rel="stylesheet" type="text/css" href="immortal.css">
 	    <meta charset="utf-8">
 	    <title>Products</title>
 	</head>
@@ -18,13 +18,14 @@
 	<a href="/products.html">Products</a> |
 	<a href="/signin.html" >Sign in</a> | 
 	<a href="/register.html" >Register</a> |
-	<input type="search" placeholder="Search..">
+	<input type="search" id="myInput" onkeyup="myFunction()" placeholder="Search.." title="Type in a produce name">
 		
 		  
 	</nav>
 		<div class="background">
+		<ul id="myUL">
 			<div class="parent" align="center">
-				
+			
 				<div class="carTile">
 					<img src="images/kitt.jpg" alt="nada">
 					  <aside class="information">
@@ -60,8 +61,8 @@
 				<div class="carTile">
 					<img src="images/mcqueen.jpg" alt="">
 				<aside class="information">
-			     	<p class="productName"><a href="products/mcqueen.html">Lightning Mqueen</a></p>
-			     	<p class="price">$ 250,000</p>
+			     		<p class="productName"><a href="products/mcqueen.html">Lightning Mqueen</a></p>
+			     		<p class="price">$ 250,000</p>
 					<p class="miles">12,000 miles</p>
 				</aside>
 				</div>
@@ -87,7 +88,7 @@
 					<p class="productName"><a href="products/greenhornet.html">The Black Beauty</a></p>
 					<p class="price">$ 800,000</p>
 					<p class="miles">90,000 miles</p>
-			   </aside>
+			   	</aside>
 				</div>
 				<div class="carTile">
 					<img src="images/batmobile.jpeg" alt="">
@@ -95,23 +96,23 @@
 			   		<p class="productName"><a href="products/batmobile.html">The Bat Mobile</a></p>
 			   		<p class="price">$ 2,500,000</p>
 			   		<p class="miles">1,000 miles</p>
-			   </aside>
+			   	</aside>
 				</div>
 				<div class="carTile">
 					<img src="images/backtothefuture.jpg" alt="">
-			<aside class="information">
-				<p class="productName"><a href="products/delorean.html">Doc's Delorean</a></p>
-				<p class="price">$ 5,000,000</p>
-				<p class="miles">-12,000 miles</p>
-		    </aside>
+				<aside class="information">
+					<p class="productName"><a href="products/delorean.html">Doc's Delorean</a></p>
+					<p class="price">$ 5,000,000</p>
+					<p class="miles">-12,000 miles</p>
+		    		</aside>
 				</div>
 				<div class="carTile">
 					<img src="images/77transam.jpg" alt="">
-			<aside class="information">
-				<p class="productName"><a href="products/transam.html">Smokey's Transam</a></p>
-				<p class="price">$ 65,000</p>
-				<p class="miles">225,000 miles</p>
-		   </aside>
+				<aside class="information">
+					<p class="productName"><a href="products/transam.html">Smokey's Transam</a></p>
+					<p class="price">$ 65,000</p>
+					<p class="miles">225,000 miles</p>
+		   		</aside>
 				</div>
 				<div class="carTile">
 					<img src="images/ghostbusters.jpg" alt="">
@@ -121,11 +122,34 @@
 				<p class="miles">80,000 miles</p>
 		   </aside>
 				</div>
-				</div>
-			</div>
+			
+		
+		</div>
+</ul>
+		</div>
 		
 		
 		
 	   <footer>Immortal Cars Distributions LLC</footer>
 	</body>
 </html>
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    cn = ul.getElementsByClassName("carTile");
+    for (i = 0; i < cn.length; i++) {
+        a = cn[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            cn[i].style.display = "";
+        } else {
+            cn[i].style.display = "none";
+        }
+    }
+}
+</script>
