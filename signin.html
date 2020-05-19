@@ -1,60 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="immortal.css">
-	<meta charset="utf-8">
-	<title>Sign in</title>
-	<script type="text/javascript" src="immortal.js"></script>
+    <link rel="stylesheet" type="text/css" href="immortal.css">
+    <meta charset="utf-8">
+    <title>Sign in</title>
+    <script type="text/javascript" src="immortal.js"></script>
 </head>
 
-<body/*bgcolor="#a9a9a9"*/>
+<style>
+.bg{
+background-image: url(images/background.jpg);
+height: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+</style>
+
+<body>
 
 <header>
     <h1><a href="/index.html" class="storeName">Immortal Cars</a></h1>
     <strong>the cars of your dreams</strong>
-    </header>
-    <nav>
-        <a href="/hotdeal.html">Hot Deal</a> |
-          <a href="/about.html">About us</a> |
-        <a href="/contact.html">Contact Us</a> | 
-        <a href="/products.html">Products</a> |
-        <a href="/signin.html" class="floatRight">Sign in</a>  
-        <a href="/register.html" class="floatRight">Register</a> 
-        <input type="text" placeholder="Search.."> |
-        
-          
-    </nav>
-    <div class="container">
-      <form name="user" action="#">
-          <div class="row">
-              <h2 class="centered">Login</h2>
-  
-              <div class="loginInfo">
-                  <input type="text" name="username" placeholder="Username" required>
-                  <input type="password" name="password" placeholder="Password" required>
-			<p id="newCard"></p>
-              </div>
-              <div class="loginButton centered">
-                  <button type="submit" value="Login" onclick="checkLoginInput(document.user.password,document.user.username)">submit</button>
-              </div>
-  
-          </div>
-      </form>
-  </div>
+</header>
+
+<nav>
+    <a href="/hotdeal.html">Hot Deal</a> |
+    <a href="/about.html">About us</a> |
+    <a href="/contact.html">Contact Us</a> |
+    <a href="/products.html">Products</a> |
+    <a href="/signin.html">Sign in</a> |
+    <a href="/register.html">Register</a> |
+    <input type="text" placeholder="Search..">
 
 
+</nav>
 
-  <div class="bottom-container">
-      <p style="margin: 0px">
-          <a href="#" class="otherlink link">Forgot password?</a>
-      </p>
-      <p style="margin: 0px">
-          <a href="register.html" class="otherlink link">Sign up</a>
-      </p>
-  </div>
+<div class="bg">
+<div class="container centered">
+    <div class="backgroundContainer">
+    <form name="user" action="#">
+        <div class="row">
+            <h2 class="centered">Login</h2>
 
+            <div class="loginInfo">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <p id="newCard"></p>
+            </div>
+            <div class="loginButton centered">
+                <button type="submit" value="Login" onclick="checkLoginInput(document.user.password,document.user.username)">submit</button>
+            </div>
+    <div>
+        <p>
+            <a href="#" class="otherlink" style="color: white">Forgot password?</a>
+        </p>
+        <p>
+            <a href="register.html" class="otherlink" style="color: white">Sign up</a>
+        </p>
+    </div>
+        </div>
+    </form>
+</div>
+</div>
+</div>
 
-
-    </Body>
+</Body>
 
 </html>
