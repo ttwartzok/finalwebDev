@@ -1,3 +1,4 @@
+// check for price
 function showDeals(){  
     var string = document.getElementsByClassName("price");
     var sLength = string.length;
@@ -15,12 +16,10 @@ function showDeals(){
         if(tstring>=400000){
             string[i].style.color="red";
             }
-
-        
-    
-
     }
 }
+
+// verify login
 function checkLoginInput(password,username){
     var pwInput = password;
     var validWords = /^[a-zA-Z0-9]+$/;
@@ -44,7 +43,7 @@ function checkLoginInput(password,username){
   
  }
 
-
+// verify sign up
 function checkSignUpInput(username,password,password2){
     var validWords = /^[a-zA-Z0-9]+$/;
 
@@ -75,9 +74,10 @@ function checkSignUpInput(username,password,password2){
   
  }
 
-function myFunction() {
+// search
+function searchBar() {
     var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
+    input = document.getElementById("find");
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
     cn = ul.getElementsByClassName("carTile");
@@ -91,7 +91,17 @@ function myFunction() {
         }
     }
 }
+
 window.onload = showDeals;
 
+// random links
+var links = [
+"/batmobile.html", "/delorean.html", "/ghostbusters.html", "/greenhornet.html", "/griswalds.html"
+, "/jetsons.html", "/kitt.html", "/mario.html", "/mcqueen.html", "/mysterymachine.html",
+"/transam.html", "/warthog.html"]
 
+function randomLink() {
+var i = parseInt(Math.random() * links.length);
+location.href = links[i];
+};
 
